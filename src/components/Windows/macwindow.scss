@@ -1,0 +1,51 @@
+:root {
+    --dot-size: 15px;
+    --nav-padding-x: 0.75rem;
+    --nav-padding-y: 0.5rem;
+}
+
+.window {
+    height: 300px;
+    width: 400px;
+
+    background-color: black;
+    border-radius: 0.75rem;
+    color: #9e9191;
+
+    .nav {
+        padding-inline: 0.75rem;
+        padding-block: 0.5rem;
+
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        border-bottom: 1px solid #6d6262;
+
+        .dots {
+            display: flex;
+            gap: 0.25rem;
+
+
+            .dot {
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+            $dot-colors: (
+                'red': #de1818,
+                'yellow': #cece16,
+                'green': #07ab07,
+            );
+
+        @each $name, $color in $dot-colors {
+            .#{$name} {
+                background-color: $color;
+            }
+        }
+    }
+
+}
+}
