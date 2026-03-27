@@ -1,28 +1,36 @@
 import React from 'react'
 import { Rnd } from 'react-rnd'
 import "./macwindow.scss"
-const MacWindow = ({children}) => {
-  return (
-    <Rnd>
-        <div className='window'>
-            <div className="nav">
-                <div className="dots">
-                    <div className="dot red"></div>
-                    <div className="dot yellow"></div>
-                    <div className="dot green"></div>
+const MacWindow = ({ children }) => {
+    return (
+        <Rnd
+            default={{
+                width: "40vw",
+                height: "40vh",
+                x:300,
+                y:200
+            }
+
+            }>
+            <div className='window'>
+                <div className="nav">
+                    <div className="dots">
+                        <div className="dot red"></div>
+                        <div className="dot yellow"></div>
+                        <div className="dot green"></div>
+                    </div>
+
+                    <div className="title">
+                        <p>neelceo - zsh</p>
+                    </div>
                 </div>
 
-                <div className="title">
-                    <p>neelceo - zsh</p>
+                <div className="main-content">
+                    {children}
                 </div>
             </div>
-
-            <div className="main-content">
-            {children}
-            </div>
-        </div>
-    </Rnd>
-  )
+        </Rnd>
+    )
 }
 
 export default MacWindow

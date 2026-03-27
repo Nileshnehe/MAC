@@ -5,12 +5,14 @@
 }
 
 .window {
-    height: 300px;
-    width: 400px;
-
+    height: 100%;
+    overflow: hidden;
     background-color: black;
     border-radius: 0.75rem;
     color: #9e9191;
+
+    display: flex;
+    flex-direction: column;
 
     .nav {
         padding-inline: 0.75rem;
@@ -47,5 +49,9 @@
         }
     }
 
+}
+.main-content{
+   flex: 1;
+   overflow: hidden;
 }
 }
